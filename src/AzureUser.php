@@ -3,7 +3,6 @@
 namespace hakkahio\AzureSocialite;
 
 use GuzzleHttp\Client;
-use Laravel\Socialite\Facades\Socialite;
 
 class AzureUser
 {

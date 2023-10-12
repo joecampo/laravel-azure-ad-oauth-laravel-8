@@ -2,29 +2,17 @@
 
 namespace hakkahio\AzureSocialite;
 
-use Illuminate\Support\Facades\Auth;
-use SocialiteProviders\Manager\SocialiteWasCalled;
-use hakkahio\AzureSocialite\Middleware\Authenticate;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
     public function register()
     {
-        // $this->app->bind('azure-user', function(){
-        //     return new AzureUser(
-        //         session('azure_user')
-        //     );
-        // });
+        //
     }
 
     public function boot()
     {
-        // Auth::extend('azure', function(){
-        //     dd('test');
-        //     return new Authenticate();
-        // });
-
         $this->publishes([
             __DIR__.'/config/azure-oath.php' => config_path('azure-oath.php'),
         ]);
